@@ -187,6 +187,6 @@ function showResult() {
   } else if (point <= 99) {
     com.textContent = "You are just...... 🔥";
   } else if (point == 100) {
-    com.textContent = "Are you a Historian? 🥵";
+    com.textContent = "Congratulations Champ 🥵";
   }
 }
