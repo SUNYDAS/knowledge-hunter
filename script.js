@@ -174,6 +174,12 @@ get_opt.addEventListener('change', () => {
 });
 
 function showResult() {
+
+  // Exit fullscreen first
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+  
   timerDisplay.style.display = "none";
   get_qst.style.display = "none";
   get_opt.style.display = "none";
@@ -201,3 +207,4 @@ function showResult() {
     com.textContent = "Congratulations Champ 🥵";
   }
 }
+
