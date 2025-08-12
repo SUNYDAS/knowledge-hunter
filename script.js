@@ -9,6 +9,7 @@ const com = document.getElementById('comment');
 const nextBtn = document.getElementById('nextBtn');
 const categorySelect = document.getElementById('category-select');
 const topic = document.getElementById('topic');
+const ld=document.getElementById('bt_home');
 
 let currentQuestion = 0;
 let score = 0;
@@ -25,6 +26,15 @@ function startQuiz() {
     return;
   }
 
+  // Request fullscreen for the whole page
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
+
   selectedCategory = category;
   categoryQuestions = questions[category];
   currentQuestion = 0;
@@ -32,13 +42,13 @@ function startQuiz() {
 
   categorySelect.style.display = 'none';
   con.style.display = 'block';
-
   resultEl.style.display = 'none';
   com.style.display = 'none';
   get_qst.style.display = 'block';
   get_opt.style.display = 'block';
   nextBtn.style.display = "inline-block";
   pr.style.display = "block";
+  ld.style.display = 'none';
 
   loadQuestion();
 }
@@ -172,6 +182,7 @@ function showResult() {
   con.classList.add('MCQ-edit');
   resultEl.style.display = "block";
   com.style.display = 'block';
+  ld.style.display = 'block';
 
   resultEl.textContent = `You Scored ${score} out of ${categoryQuestions.length}`;
   let point = (score * 100) / categoryQuestions.length;
@@ -179,7 +190,7 @@ function showResult() {
   if (point == 0) {
     com.textContent = "Try reading the basics first 📘";
   } else if (point <= 25) {
-    com.textContent = "Go and get a History Book 😂";
+    com.textContent = "Go and get a Book 😂";
   } else if (point <= 50) {
     com.textContent = "Keep trying 👍";
   } else if (point <= 75) {
