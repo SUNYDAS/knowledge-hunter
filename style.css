@@ -16,6 +16,7 @@ body {
 
 a{
     color: #afafff !important;
+    text-decoration: none !important;
 }
 
 h1{
@@ -108,4 +109,5 @@ footer {
     font-weight: bold;
     font-size: 25px;
     text-transform: capitalize;
+
 }
