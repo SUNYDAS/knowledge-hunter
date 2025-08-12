@@ -56,7 +56,7 @@ function startQuiz() {
 function loadQuestion() {
   clearInterval(timerId);
 
-  timeLeft = 30;
+  timeLeft = 45;
   timerDisplay.textContent = `Time left: ${timeLeft}s`;
   timerId = setInterval(() => {
     timeLeft--;
@@ -207,4 +207,5 @@ function showResult() {
     com.textContent = "Congratulations Champ 🥵";
   }
 }
+
 
