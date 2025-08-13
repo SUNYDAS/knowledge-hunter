@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(image/abstract-dark-background-with-flowing-colouful-waves.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* your main content */
+}
+
+#category-select{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(250, 165, 255,0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 40%;
+    padding: 30px;
+}
+
+select {
+    background-color: black !important;
+    color: #faa5ff !important;
+    border: 2px solid #faa5ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(250, 165, 255, 0.3);
+}
+
+/* Hover effect */
+select:hover {
+    background-color: #111 !important;
+    box-shadow: 0 0 12px rgba(250, 165, 255, 0.5);
+}
+
+/* Focus effect */
+select:focus {
+    border-color: #ffccff;
+    box-shadow: 0 0 15px rgba(250, 165, 255, 0.7);
+}
+
+.hd{
+    color: white;
+    font-family: "Edu NSW ACT Cursive", cursive !important;
+}
+
+a{
+    color: #afafff !important;
+    text-decoration: none !important;
+}
+
+h1{
+    margin: 20px !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hd span{
+    color: #faa5ff;
+}
+
+#MCQ-container{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(250, 165, 255,0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px !important;
+    width: 800px;
+}
+
+.MCQ-edit{
+    border: none !important;
+    padding: 0px !important;
+}
+
+#progress{
+    color: #faa5ff;
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+#qst{
+    color: white;
+}
+
+#err{
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#timer{
+    font-size: 20px;
+    font-weight: bold; 
+    color: red;
+}
+
+.opt label {
+    background-color: whitesmoke;
+    padding: 10px;
+    color: black;
+    display: block;
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn1 {
+    background: linear-gradient(135deg, #faa5ff, #d88bff);
+    border: none;
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 25px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(250, 165, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn1:hover {
+    background: linear-gradient(135deg, #d88bff, #faa5ff);
+    box-shadow: 0 6px 20px rgba(250, 165, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.btn1:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(250, 165, 255, 0.4);
+}
+
+.next_btn{
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+footer {
+    font-family: 'Roboto' !important;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+    background-color: black;
+}
+
+#result{
+    background-color: green;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+#comment{
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#topic{
+    color: yellowgreen;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: capitalize;
+}
